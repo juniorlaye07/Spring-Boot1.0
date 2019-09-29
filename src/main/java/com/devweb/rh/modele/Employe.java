@@ -26,10 +26,13 @@ public class Employe {
     @DateTimeFormat(pattern ="yyyy-MM-dd")
     private Date datenaissance;
     private int salaire;
+
     @JoinColumn(name = "service_id",referencedColumnName ="id")
     @ManyToOne(optional = false)
+
     private Service service;
     @JsonIgnoreProperties("employes")
+
     public int getId() {
         return id;
     }

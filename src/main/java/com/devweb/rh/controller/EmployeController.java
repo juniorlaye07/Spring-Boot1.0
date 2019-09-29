@@ -18,12 +18,14 @@ public class EmployeController {
     private EmployeRepository employeRepository;
     @GetMapping(value = "/listeEmploye")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    public List<Employe> employeListList(){
+    public List<Employe> employeListList()
+    {
         return employeRepository.findAll();
     }
     @PostMapping(value = "/add",consumes = {MediaType.APPLICATION_JSON_VALUE})
     @PreAuthorize("hasAuthority(('ROLE_ADMIN'))")
-    public  Employe add(@RequestBody(required = false) Employe emp){
+    public  Employe add(@RequestBody(required = false) Employe emp)
+    {
         return employeRepository.save(emp);
     }
 }

@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)//si le test genère une erreur en général faut vérifier les composants des Class
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class RhApplicationTests {
     @Test

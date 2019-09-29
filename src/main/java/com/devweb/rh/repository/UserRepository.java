@@ -15,6 +15,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
     Boolean existsByUsername(String username);
     Boolean existsByEmail(String email);
-    @Query("SELECT u from User u WHERE u.login IS null ")//requete jpql :requete specifiques en cas de besoin
-    public List<User> users();
+   // @Query("SELECT u from User u WHERE u.login IS null ")//requete jpql :requete specifiques en cas de besoin
+   // public List<User> users();
 }
